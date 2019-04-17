@@ -4,9 +4,14 @@
 
 function longestConsec(strarr, k) {
     var longest = "";
+    // loop through array
     for(var i=0;k>0 && i<=strarr.length-k;i++){
+        // slice consecutive words from i to i+k
       var tempArray = strarr.slice(i,i+k);
+      // join consecutive words together in one string
       var tempStr = tempArray.join("");
+      // check if the new string is longer then the previously stored string
+      // if so then replace previous string with new, longer string
       if(tempStr.length > longest.length){
         longest = tempStr;
       }
